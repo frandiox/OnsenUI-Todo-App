@@ -14,6 +14,19 @@
   <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
   <link rel="stylesheet" href="style.css">
 
+  <style id="setup-style">
+  </style>
+
+  <script>
+    if (/platform=android/.test(window.location.search)) {
+      ons.platform.select('android');
+    }
+
+    if (/links=false/.test(window.location.search)) {
+      document.getElementById('setup-style').innerHTML = '#links { display: none }';
+    }
+  </script>
+
 </head>
 
 <body>
